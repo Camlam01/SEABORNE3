@@ -1,0 +1,35 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <AssemblyName>Seaborne</AssemblyName>
+    <RootNamespace>Seaborne</RootNamespace>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <BaseOutputPath>bin\$(Configuration)\</BaseOutputPath>
+    <Sts2Dir Condition="'$(Sts2Dir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Slay the Spire 2\data_sts2_windows_x86_64</Sts2Dir>
+    <ModsPath Condition="'$(ModsPath)' == ''">$([System.IO.Path]::Combine($([System.IO.Directory]::GetParent('$(Sts2Dir)').FullName), 'mods'))</ModsPath>
+    <_ModOutputDir>$([System.IO.Path]::Combine('$(ModsPath)', '$(MSBuildProjectName)'))</_ModOutputDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Alchyr.Sts2.BaseLib" Version="*" />
+    <Reference Include="sts2">
+      <HintPath>$(Sts2Dir)\sts2.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(Sts2Dir)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="CopyModFiles" AfterTargets="Build">
+    <MakeDir Directories="$(_ModOutputDir)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(_ModOutputDir)" />
+    <Copy SourceFiles="mod_manifest.json" DestinationFolder="$(_ModOutputDir)" />
+    <Copy SourceFiles="$(MSBuildProjectName).pck" DestinationFolder="$(_ModOutputDir)" Condition="Exists('$(MSBuildProjectName).pck')" />
+  </Target>
+</Project>

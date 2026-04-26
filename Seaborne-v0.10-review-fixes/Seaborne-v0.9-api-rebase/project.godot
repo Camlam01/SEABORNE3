@@ -1,0 +1,12 @@
+; Engine configuration file.
+; Minimal Godot project wrapper for the Seaborne STS2 character mod.
+
+config_version=5
+
+[application]
+config/name="Seaborne"
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
+config/icon="res://mod_image.png"
+
+[dotnet]
+project/assembly_name="Seaborne"

@@ -1,0 +1,14 @@
+{
+  "id": "seaborne",
+  "pck_name": "Seaborne",
+  "name": "The Seaborne",
+  "author": "Camlam01 + Code Copilot",
+  "description": "A swashbuckling siren character for Slay the Spire 2.",
+  "version": "0.9.0",
+  "has_pck": true,
+  "has_dll": true,
+  "affects_gameplay": true,
+  "dependencies": [
+    "BaseLib"
+  ]
+}

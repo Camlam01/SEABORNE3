@@ -1,0 +1,20 @@
+{
+  "Seaborne:Keywords:Cast:Name": "Cast",
+  "Seaborne:Keywords:Cast:Description": "Hooks the newest card in your discard pile. Each stack hooks one card deeper.",
+  "Seaborne:Keywords:Reel:Name": "Reel",
+  "Seaborne:Keywords:Reel:Description": "Pull cards into your hand starting at the hooked card and moving toward the newest discarded card. Removes all Cast.",
+  "Seaborne:Keywords:Wet:Name": "Wet",
+  "Seaborne:Keywords:Wet:Description": "Triggers effects when reeled. Does not count as playing the card.",
+  "Seaborne:Keywords:Imbued:Name": "Imbued",
+  "Seaborne:Keywords:Imbued:Description": "This card gains double effect when a modifier is applied to it.",
+  "Seaborne:Keywords:Unimbued:Name": "Unimbued",
+  "Seaborne:Keywords:Unimbued:Description": "This card cannot be modified.",
+  "Seaborne:Keywords:Waterwall:Name": "Waterwall",
+  "Seaborne:Keywords:Waterwall:Description": "Blocks attack damage only if the damage is less than or equal to its stacks. Removed at end of turn.",
+  "Seaborne:Keywords:Trance:Name": "Trance",
+  "Seaborne:Keywords:Trance:Description": "Enemies with Trance use their intent but cannot complete their turn or advance normally.",
+  "Seaborne:Keywords:Cannon:Name": "Cannon",
+  "Seaborne:Keywords:Cannon:Description": "Loaded cannonballs fire through cannon-firing cards. Firing does not count as playing the cannonball.",
+  "Seaborne:Keywords:Gems:Name": "Gems",
+  "Seaborne:Keywords:Gems:Description": "Recharge each turn and modify the first eligible card for each gem."
+}
